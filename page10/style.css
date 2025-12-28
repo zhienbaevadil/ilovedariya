@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url("back.png") center/cover no-repeat;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* Контент по центру */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  text-align: center;
+  opacity: 0;
+}
+
+/* Текст */
+h1 {
+  font-size: 52px;
+  color: white;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Анимация появления */
+.show {
+  animation: fadeUp 1.6s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -30%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Кнопка */
+.end-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+
+  padding: 12px 24px;
+  font-size: 16px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: rgba(151, 0, 0, 0.9);
+  cursor: pointer;
+
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.end-btn:hover {
+  transform: scale(1.08);
+  background: white;
+}
