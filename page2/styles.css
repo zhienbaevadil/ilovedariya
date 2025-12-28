@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Кот по центру */
+.big-cat {
+  width: 550px; /* можно подкорректировать */
+  max-width: 95%;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+
+@keyframes flyIn {
+  from {
+    transform: translateX(500px) translateY(-200px) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Текст под котом */
+.greeting-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 100px;
+  color: #EC4899;
+  margin-bottom: 30px;
+}
+
+.greeting-text p {
+  margin: 6px 0;
+}
+
+/* Кнопки */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+}
+
+.btn {
+  padding: 15px 50px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 40px;
+  border-radius: 17px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.accept-btn {
+  background: #8a007a;
+  color: white;
+}
+
+.reject-btn {
+  background: #8a007a;
+  color: #ffffff;
+}
+
+/* Адаптив */
+@media (max-width: 480px) {
+  .big-cat { width: 250px; }
+  .greeting-text { font-size: 24px; }
+  .btn { font-size: 16px; padding: 10px 28px; }
+}
