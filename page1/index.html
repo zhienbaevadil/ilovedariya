@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>New Year Surprise</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Montserrat:ital,wght@1,800&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1 class="title-top">open when it’s</h1>
+
+    <section class="timer-wrapper" aria-labelledby="timer-label" aria-live="polite">
+      <div id="timer" class="timer" aria-hidden="true">
+        <!-- containers will hold individual digit spans (tolerant to variable-length days) -->
+        <span id="days-container" class="time-block"></span> :
+        <span id="hours-container" class="time-block"></span> :
+        <span id="minutes-container" class="time-block"></span> :
+        <span id="seconds-container" class="time-block"></span>
+      </div>
+      <div class="timer-labels" id="timer-label">
+        <span>DAYS</span> <span>HOURS</span> <span>MINS</span> <span>SECS</span>
+      </div>
+    </section>
+
+    <h2 class="title-bottom">new year</h2>
+
+    <button class="next-btn" id="nextBtn" type="button">Next</button>
+
+    <div class="gif-container" role="img" aria-label="Celebration GIF">
+      <img src="celebrate.gif" alt="Confetti celebration GIF">
+    </div>
+  </main>
+
+  <img src="cat-left.png" alt="Cute cat left" class="cat cat-left">
+  <img src="cat.png" alt="Cute cat right" class="cat cat-right">
+
+  <script src="script.js" defer></script>
+</body>
+</html>

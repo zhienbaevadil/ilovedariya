@@ -1,0 +1,132 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.container { text-align: center; padding: 28px; }
+
+.title-top {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 40px;
+  color: #EC4899;
+  margin-bottom: 8px;
+}
+
+.title-bottom {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 52px;
+  font-style: italic;
+  font-weight: 800;
+  color: #222;
+  margin-top: 12px;
+}
+
+.timer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 12px 0;
+}
+
+/* The whole timer uses containers (each container may contain several digit spans) */
+#timer { font-size: 60px; font-weight: 500; letter-spacing: 4px; }
+
+/* container holding digits for one unit */
+.time-block {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 4px;
+}
+
+/* single digit */
+.digit {
+  display: inline-block;
+  min-width: 30px;
+  padding: 2px 4px;
+  text-align: center;
+  font-size: inherit;
+  font-weight: inherit;
+  transition: transform 0.36s cubic-bezier(.2,.9,.3,1);
+  transform-origin: center;
+  backface-visibility: hidden;
+}
+
+/* flip animation only on the changing digit */
+.digit-flip {
+  transform: rotateX(360deg);
+}
+
+/* labels under timer */
+.timer-labels {
+  display: flex;
+  gap: 40px;
+  margin-top: 6px;
+  font-size: 14px;
+  color: #666;
+}
+
+.next-btn {
+  margin-top: 30px;
+  padding: 14px 30px;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+  background: #EC4899;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform, opacity;
+}
+
+.next-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.gif-container { margin-top: 20px; position: relative; z-index: 10; text-align: center; }
+.gif-container img { width: 470px; max-width: 100%; height: auto; display: inline-block; }
+
+.cat { width: 340px; position: absolute; bottom: 80px; pointer-events: none; }
+.cat-right { right: 100px; animation: floatCatRight 6s ease-in-out infinite; }
+.cat-left { left: 100px; animation: floatCatLeft 6s ease-in-out infinite; }
+
+@keyframes floatCatRight {
+  0% { transform: translate(0,0) rotate(0deg); }
+  25% { transform: translate(-15px, -20px) rotate(-2deg); }
+  50% { transform: translate(10px, -10px) rotate(2deg); }
+  75% { transform: translate(-10px, 15px) rotate(-1deg); }
+  100% { transform: translate(0,0) rotate(0deg); }
+}
+
+@keyframes floatCatLeft {
+  0% { transform: translate(0,0) rotate(0deg); }
+  25% { transform: translate(15px, -15px) rotate(2deg); }
+  50% { transform: translate(-10px, -10px) rotate(-2deg); }
+  75% { transform: translate(10px, 10px) rotate(1deg); }
+  100% { transform: translate(0,0) rotate(0deg); }
+}
+
+@keyframes fadeSlideUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-once { animation: fadeSlideUp 0.8s forwards; }
+
+@media (max-width: 480px) {
+  .cat { width: 240px; bottom: 60px; }
+  .title-top { font-size: 32px; }
+  .title-bottom { font-size: 38px; }
+  #timer { font-size: 42px; }
+  .next-btn { font-size: 18px; padding: 10px 28px; }
+  .timer-labels { gap: 20px; font-size: 12px; }
+  .gif-container img { width: 150px; }
+}
