@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Baloo 2', cursive;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url('back.png') no-repeat center center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+/* ТЕКСТ */
+.text {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  line-height: 1.5;
+  max-width: 700px;
+}
+
+.text .big {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.love-gif {
+  margin-top: 25px;
+  width: 400px;
+  display: block;
+  margin-left: 150px; /* + вправо / - влево */
+}
+
+/* ФОТО-БЛОК */
+.photo-wrapper {
+  position: relative; /* ВАЖНО */
+}
+
+.photo {
+  width: 420px;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+
+  
+}
+
+/* КНОПКА ВНИЗУ ФОТО */
+.back-btn {
+  position: absolute;
+  bottom: 37px;           /* прямо внизу фотки */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  padding: 12px 36px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+
+  background: rgba(152, 0, 142, 0.9);
+  color: white;
+  backdrop-filter: blur(6px);
+  transition: 0.25s ease;
+}
+
+.back-btn:hover {
+  transform: translateX(-50%) scale(1.1);
+}
