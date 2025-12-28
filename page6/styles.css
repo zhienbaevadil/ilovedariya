@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Baloo 2', cursive;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #ffffff; /* белый фон */
+  padding-top: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 90px;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 0px;
+}
+
+/* CSS Grid для квадрата */
+.gifts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+  grid-template-rows: repeat(2, 1fr);    /* 2 ряда */
+  gap: 40px;                             /* расстояние между предметами */
+  justify-items: center;
+  align-items: center;
+  margin-top: -70px;
+}
+
+.gift {
+  width: 400px; /* крупные предметы */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.gift:hover {
+  transform: scale(1.15);
+}
